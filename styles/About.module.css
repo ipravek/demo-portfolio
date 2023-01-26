@@ -1,0 +1,12 @@
+.about h2 {
+  font-size: 3rem;
+}
+
+.about p {
+  width: 80%;
+  margin: auto;
+}
+
+.aboutContainer{
+    margin-top: 20px;
+}

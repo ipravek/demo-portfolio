@@ -1,0 +1,31 @@
+.projects h2 {
+  font-size: 3rem;
+}
+
+.singleProject {
+  width: 100%;
+}
+
+.projectContainer {
+  height: 50vh;
+  display: flex;
+}
+
+.items {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items .holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items .holder img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}

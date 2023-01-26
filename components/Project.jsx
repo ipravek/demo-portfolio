@@ -1,5 +1,7 @@
 import styles from "@/styles/Project.module.css";
 import { img1, img2, img3 } from "@/assets/images";
+import uuid from "react-uuid";
+import Image from "next/image";
 
 const Project = () => {
   let projects = [
@@ -32,25 +34,23 @@ const Project = () => {
         <h2>Projects</h2>
         <div className={styles.singleProject}>
           {projects.map((e) => (
-            <>
-              <div className={styles.singleProject}>
-                <div className={styles.projectContainer}>
-                  <div className={styles.items}>
-                    <div className={styles.holder}>
-                      <img src={e.image.src} alt="img" />
-                    </div>
+            <div className={styles.singleProject} key={uuid()}>
+              <div className={styles.projectContainer} key={uuid()}>
+                <div className={styles.items} key={uuid()}>
+                  <div className={styles.holder} key={uuid()}>
+                    <Image src={e.image} alt="img" key={uuid()} />
                   </div>
-                  <div className={styles.items}>
-                    <div className={styles.holder}>
-                      <div>
-                        <h2>{e.name}</h2>
-                        <p>{e.description}</p>
-                      </div>
+                </div>
+                <div className={styles.items} key={uuid()}>
+                  <div className={styles.holder} key={uuid()}>
+                    <div>
+                      <h2 key={uuid()}>{e.name}</h2>
+                      <p key={uuid()}>{e.description}</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import styles from "@/styles/Work.module.css";
+import uuid from "react-uuid";
 
 const Work = () => {
   const workDetails = [
@@ -31,16 +32,22 @@ const Work = () => {
       <div className={styles.work}>
         <div className={styles.company}>
           {workDetails.map((e) => (
-            <div className={styles.companyCard}>
-              <div className={styles.firstHalf}>
-                <div className={styles.cName}>{e.name}</div>
-                <div className={styles.duration}>{e.duration}</div>
+            <div className={styles.companyCard} key={uuid()}>
+              <div className={styles.firstHalf} key={uuid()}>
+                <div className={styles.cName} key={uuid()}>
+                  {e.name}
+                </div>
+                <div className={styles.duration} key={uuid()}>
+                  {e.duration}
+                </div>
               </div>
-              <div className={styles.secondHalf}>
-                <div className={styles.description}>{e.description}</div>
-                <div className={styles.tags}>
+              <div className={styles.secondHalf} key={uuid()}>
+                <div className={styles.description} key={uuid()}>
+                  {e.description}
+                </div>
+                <div className={styles.tags} key={uuid()}>
                   {e.tags.map((e) => (
-                    <p>{e}</p>
+                    <p key={uuid()}>{e}</p>
                   ))}
                 </div>
               </div>
